@@ -5,6 +5,8 @@ import { Navbar } from './component/Navbar';
 import { ProductListings } from './pages/ProductListings';
 import { Cart } from './pages/Cart';
 import { ContextProvider } from './context/CartContext';
+import { AllBooks } from './pages/AllBooks';
+import { AddBooks } from './pages/AddBook';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
           <Routes>
             <Route path='/' element={ <ProductListings /> } />
             <Route path='/cart' element={ <Cart /> } />
+            <Route path='/books' element={ <AllBooks /> } />
+            <Route path='/addBooks' element={ <AddBooks /> } />
           </Routes>
         </Router>
       </ContextProvider>

@@ -9,8 +9,10 @@ export const Navbar = () => {
                 <div className="nav">
                     <NavLink className="nav-link" to='/'>Product</NavLink>
                     <NavLink className='nav-link' to='/cart'>Cart</NavLink>
+                    <NavLink className='nav-link' to='/books'>Books library</NavLink>
+                    <NavLink className='nav-link' to='/addbooks'>Add Books</NavLink>
                 </div>
-              <CartStatus/>
+                <CartStatus />
             </nav>
         </div>
     )
