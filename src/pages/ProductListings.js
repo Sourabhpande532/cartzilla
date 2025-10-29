@@ -1,3 +1,4 @@
+import { useCart } from "../context/CartContext";
 
 const productList = [
     {
@@ -26,9 +27,19 @@ const productList = [
     },
 ];
 export const ProductListings = () => {
+    const { addToCart } = useCart()
     return (
         <div>
             <h1>List of project</h1>
+            { productList.map( ( product ) =>
+            (
+                <div key={ product.id }>
+                    <h1>{ product.name }</h1>
+                    <h2>{ product.price }</h2>
+                    <p>{ product.details }</p>
+                    <button onClick={ () => addToCart( product ) }>Add To Cart</button>
+                </div>
+            ) ) }
         </div>
     )
 }
