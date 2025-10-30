@@ -30,9 +30,9 @@ const productList = [
 ];
 export const ProductListings = () => {
     const { addToCart } = useCart()
-    const {theme} = useContext(ThemeContext)
+    const { theme } = useContext( ThemeContext )
     return (
-        <div style={ { backgroundColor: theme === "light" ? "white" : "black", color: theme === 'light' ? "black": "pink" } }>
+        <div style={ { backgroundColor: theme === "light" ? "white" : "black", color: theme === 'light' ? "black" : "pink" } }>
             <h1>List of project</h1>
             { productList.map( ( product ) =>
             (
@@ -41,6 +41,8 @@ export const ProductListings = () => {
                     <h2>{ product.price }</h2>
                     <p>{ product.details }</p>
                     <button className="btn btn-outline-primary" onClick={ () => addToCart( product ) }>Add To Cart</button>
+                    {/*  console.log( product) */ }
+
                 </div>
             ) ) }
         </div>

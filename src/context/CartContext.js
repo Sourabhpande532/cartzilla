@@ -3,7 +3,7 @@ const CartContext = createContext();
 export const useCart = () => useContext( CartContext );
 
 export const ContextProvider = ( { children } ) => {
-    // earlier either use this or below localStorage code both work
+    // earlier either use this or below localStorage code to stored data. both work
     // const [cart, setCart] = useState( [] );
     // console.log(cart);
     const [cart, setCart] = useState( () => {
@@ -15,7 +15,8 @@ export const ContextProvider = ( { children } ) => {
             return [];
         }
     } )
-
+    // console.log(cart);
+    
     useEffect( () => {
         try {
             localStorage.setItem( "cart", JSON.stringify( cart ) )

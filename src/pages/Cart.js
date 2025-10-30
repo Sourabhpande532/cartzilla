@@ -8,11 +8,10 @@ export const Cart = () => {
             { cart.length > 0 ? (
                 <div>
                     { cart.map( ( item ) => {
-                        return <section key={ item.id }>
-                            <h1>{ item.name }</h1>
+                        return <section style={{border:"2px solid black", padding:"20px", marginBottom:"15px"}} key={ item.id }>
+                            <h1 className="display-3">{ item.name }</h1>
                             <h2>{ item.price }</h2>
                             <p>{ item.details }</p>
-                            <hr />
                         </section>
                     } ) }
                 </div>

@@ -25,10 +25,12 @@ const BookProvider = ( { children } ) => {
     // when books updated useEffect run automatically on every operation add delete toggleStatus;
 
     const addBooks = ( newBook ) => {
-        // update books run useEffect then to save into localStorage 
+        // update books run useEffect then to save into localStorage here setBooks update books in state 
         setBooks( ( prevBooks ) => [...prevBooks, newBook] )
     }
 
+    // Update array those id matches & return new array 
+    // setBooks update state i.e books 
     const toggleStatus = ( id ) => {
         setBooks( ( prevBooks ) => prevBooks.map( ( book ) => book.id === id ? ( { ...book, status: book.status === "Read" ? "Unread" : "Read" } ) : book ) )
     }
