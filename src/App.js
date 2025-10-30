@@ -7,21 +7,24 @@ import { Cart } from './pages/Cart';
 import { ContextProvider } from './context/CartContext';
 import { AllBooks } from './pages/AllBooks';
 import { AddBooks } from './pages/AddBook';
+import { BookProvider } from './context/BookContext';
 
 function App() {
   return (
     <div className="container">
-      <ContextProvider>
-        <Router>
-          <Navbar />
-          <Routes>
-            <Route path='/' element={ <ProductListings /> } />
-            <Route path='/cart' element={ <Cart /> } />
-            <Route path='/books' element={ <AllBooks /> } />
-            <Route path='/addBooks' element={ <AddBooks /> } />
-          </Routes>
-        </Router>
-      </ContextProvider>
+      <BookProvider>
+        <ContextProvider>
+          <Router>
+            <Navbar />
+            <Routes>
+              <Route path='/' element={ <ProductListings /> } />
+              <Route path='/cart' element={ <Cart /> } />
+              <Route path='/books' element={ <AllBooks /> } />
+              <Route path='/addBooks' element={ <AddBooks /> } />
+            </Routes>
+          </Router>
+        </ContextProvider>
+      </BookProvider>
     </div>
   );
 }
