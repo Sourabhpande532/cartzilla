@@ -8,25 +8,30 @@ import { ContextProvider } from './context/CartContext';
 import { AllBooks } from './pages/AllBooks';
 import { AddBooks } from './pages/AddBook';
 import { BookProvider } from './context/BookContext';
+import { ThemeProvider } from './context/ThemeContext';
 
 function App() {
   return (
     <div className="container">
       <BookProvider>
         <ContextProvider>
-          <Router>
-            <Navbar />
-            <Routes>
-              <Route path='/' element={ <ProductListings /> } />
-              <Route path='/cart' element={ <Cart /> } />
-              <Route path='/books' element={ <AllBooks /> } />
-              <Route path='/addBooks' element={ <AddBooks /> } />
-            </Routes>
-          </Router>
+          <ThemeProvider>
+            <Router>
+              <Navbar />
+              <Routes>
+                <Route path='/' element={ <ProductListings /> } />
+                <Route path='/cart' element={ <Cart /> } />
+                <Route path='/books' element={ <AllBooks /> } />
+                <Route path='/addBooks' element={ <AddBooks /> } />
+              </Routes>
+            </Router>
+          </ThemeProvider>
         </ContextProvider>
       </BookProvider>
     </div>
   );
 }
-
 export default App;
+
+/* To know more about context in details
+https://codesandbox.io/p/sandbox/addtocart-9xkf2x */

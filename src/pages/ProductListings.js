@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import { useCart } from "../context/CartContext";
+import { ThemeContext } from "../context/ThemeContext";
 
 const productList = [
     {
@@ -28,8 +30,9 @@ const productList = [
 ];
 export const ProductListings = () => {
     const { addToCart } = useCart()
+    const {theme} = useContext(ThemeContext)
     return (
-        <div>
+        <div style={ { backgroundColor: theme === "light" ? "white" : "black", color: theme === 'light' ? "black": "pink" } }>
             <h1>List of project</h1>
             { productList.map( ( product ) =>
             (
