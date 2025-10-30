@@ -37,7 +37,7 @@ export const ProductListings = () => {
                     <h1>{ product.name }</h1>
                     <h2>{ product.price }</h2>
                     <p>{ product.details }</p>
-                    <button onClick={ () => addToCart( product ) }>Add To Cart</button>
+                    <button className="btn btn-outline-primary" onClick={ () => addToCart( product ) }>Add To Cart</button>
                 </div>
             ) ) }
         </div>

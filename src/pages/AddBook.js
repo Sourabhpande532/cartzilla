@@ -49,7 +49,7 @@ export const AddBooks = () => {
                         <option value="Unread">Unread</option>
                     </select>
                 </div>
-                <button type="submit">Submit</button>
+                <button className="btn btn-primary" type="submit">Submit</button>
             </form>
         </div>
     )

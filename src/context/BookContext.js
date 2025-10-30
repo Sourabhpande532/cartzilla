@@ -13,7 +13,7 @@ const BookProvider = ( { children } ) => {
             return [];
         }
     } )
-    console.log( books );
+    // console.log( books );
 
     useEffect( () => {
         try {
@@ -32,6 +32,35 @@ const BookProvider = ( { children } ) => {
     const toggleStatus = ( id ) => {
         setBooks( ( prevBooks ) => prevBooks.map( ( book ) => book.id === id ? ( { ...book, status: book.status === "Read" ? "Unread" : "Read" } ) : book ) )
     }
+    /*Optional code to understand
+     const toggleStatus = (id) => {
+  // 1️⃣ get the latest list of books
+  setBooks((prevBooks) => {
+    // 2️⃣ make a new empty array (we will fill it)
+    const updatedBooks = [];
+
+    // 3️⃣ go through each book
+    for (let b of prevBooks) {
+      // 4️⃣ if the book’s id matches the one we clicked
+      if (b.id === id) {
+        // 5️⃣ make a copy of the book and flip its status
+        const updatedBook = {
+          ...b,
+          status: b.status === "Read" ? "Unread" : "Read",
+        };
+        // 6️⃣ add the updated book to the new array
+        updatedBooks.push(updatedBook);
+      } else {
+        // 7️⃣ if it’s not the one we clicked, keep it as it is
+        updatedBooks.push(b);
+      }
+    }
+
+    // 8️⃣ finally, return the new list to React
+    return updatedBooks;
+  });
+};
+ */
 
     const deleteBook = ( id ) => {
         setBooks( ( prevBooks ) => prevBooks.filter( ( book ) => book.id !== id ) )
