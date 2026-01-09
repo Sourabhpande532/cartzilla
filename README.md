@@ -41,6 +41,7 @@ npm run dev # or `npm start` / `yarn dev`
 - Express
 - Mongo DB
 - JWT / Auth (If Case)
+- REST API's 
 
 ---
 
@@ -59,8 +60,7 @@ Watch a walkthrough (5-7 minutes) of all the major features of this app:
 - Display a list of all recipes
 - Search recipes by title
 - Paginated recipe list
-- Add New REcipe button opens a form 
-
+- Add New REcipe button opens a form
 
 **Recipe Details**
 
@@ -74,18 +74,19 @@ Watch a walkthrough (5-7 minutes) of all the major features of this app:
 
 ---
 
-## API Reference 
+## API Reference
+
 ### **GET /api/recipes**
 
 List all recipes <br>
 
-Sample Response: 
+Sample Response:
 
 ```
 [{_id, title,summary, recipe_img},...]
 ```
 
-### **GET /api/recipes/:id** 
+### **GET /api/recipes/:id**
 
 Get Details for one recipe <br>
 
@@ -105,6 +106,7 @@ Sample Response: <br>
 {_id,title,summar,recipe_img}
 
 ```
+
 ### **PUT /api/auth/signup**
 
 Register a new user <br>
@@ -117,5 +119,10 @@ Sample Response: <br>
 
 ---
 
-## Contact 
+## Contact
+
 For bugs or features request, Please reach out to [email](sourabhpande43@gmail.com)
+
+---
+
+TASK IS DONE!
