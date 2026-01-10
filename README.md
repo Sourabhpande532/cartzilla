@@ -119,13 +119,14 @@ Sample Response: <br>
 
 ---
 
-### \*\*DELETE /api/auth/delete
+### **DELETE /api/auth/delete**
 
 Delete a existing user <br>
 Sample Response: <br>
 
 ```
-{receipeId, message: "Delete Order successfully"}
+{receipeId, success:true, message: "Delete Order successfully"}
+
 ```
 
 ---
