@@ -41,7 +41,7 @@ npm run dev # or `npm start` / `yarn dev`
 - Express
 - Mongo DB
 - JWT / Auth (If Case)
-- REST API's 
+- RESTful API's
 
 ---
 
@@ -119,10 +119,21 @@ Sample Response: <br>
 
 ---
 
+### \*\*DELETE /api/auth/delete
+
+Delete a existing user <br>
+Sample Response: <br>
+
+```
+{receipeId, message: "Delete Order successfully"}
+```
+
+---
+
 ## Contact
 
 For bugs or features request, Please reach out to [email](sourabhpande43@gmail.com)
 
 ---
 
-TASK IS DONE!
+> TASK IS DONE!
