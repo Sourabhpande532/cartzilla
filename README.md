@@ -1,4 +1,4 @@
-NOTE: THIS README IS FOR PRACTICE DON"T CONSIDER WHY? IS IT SO
+NOTE: THIS README IS FOR PRACTICE DON"T CONSIDER WHY?
 
 # Recipe Organizer
 
@@ -125,7 +125,7 @@ Delete a existing user <br>
 Sample Response: <br>
 
 ```
-{receipeId, success:true, message: "Delete Order successfully"}
+{success:true, message: "Delete Order successfully"}
 
 ```
 
