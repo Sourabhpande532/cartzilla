@@ -4,7 +4,7 @@ export const Cart = () => {
   const { cart } = useCart();
   return (
     <div>
-      <h1>🛒 Your Cart</h1>
+      <h1>🛒 Your Cart Item see here</h1>
       {cart.length > 0 ? (
         <div>
           {cart.map((item) => {
